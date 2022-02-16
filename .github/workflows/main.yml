@@ -38,6 +38,9 @@ jobs:
       # Create a scratch org to test the code:
       - name: Create a scratch org
       - run: sfdx force:org:create -a actionBuild1 -d 1 -f config/project-scratch-def.json -s 
+      # Pushes all configuration to scratch org
+      - name: Pushing source
+      - run: sfdx force:source:push -f
 
   
 
